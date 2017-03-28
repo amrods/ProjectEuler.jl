@@ -14,12 +14,10 @@ const dic = Dict{Int, Int}()
 const dicchain = Dict{Int, Int}()
 
 function storechain(n::Int)
-    if haskey(dic, n)
-        return dic[n]
-    else
+    if !haskey(dic, n)
         dic[n] = chain(n)
-        return dic[n]
     end
+    return dic[n]
 end
 
 function fullchain(n::Int)
