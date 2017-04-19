@@ -20,8 +20,8 @@ function istruncprime(n::Int)
     len = length(d)
     s = 0
     for j in 1:len
-        s += isprime(sum(Int[ d[i]*10^(i-1) for i in 1:j ]))
-        s += isprime(sum(Int[ d[end-i+1]*10^(j-i) for i in 1:j ]))
+        s += isprime(sum( d[i]*10^(i-1) for i in 1:j ))
+        s += isprime(sum( d[end-i+1]*10^(j-i) for i in 1:j ))
     end
     s == 2len ? true : false
 end
