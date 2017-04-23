@@ -1,5 +1,4 @@
 # https://projecteuler.net/problem=44
-# not complete
 
 const N = 3_000
 pentagonal(n::Int) = div(n*(3n - 1), 2)
