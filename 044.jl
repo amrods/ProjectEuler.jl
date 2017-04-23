@@ -1,7 +1,7 @@
 # https://projecteuler.net/problem=44
 # not complete
 
-const N = 2_000
+const N = 3_000
 pentagonal(n::Int) = div(n*(3n - 1), 2)
 
 const pentset = [pentagonal(i) for i in 1:N]
